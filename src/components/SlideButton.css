@@ -1,0 +1,44 @@
+.slide-button {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slide-button .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slide-button.on .slider {
+  background-color: #2196f3;
+}
+
+.slide-button.off .slider {
+  background-color: #ccc;
+}
+
+.slide-button .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.slide-button.on .slider:before {
+  transform: translateX(26px);
+}
+
+.slide-button.off .slider:before {
+  transform: translateX(0px);
+}
