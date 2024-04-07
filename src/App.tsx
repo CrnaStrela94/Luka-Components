@@ -1,7 +1,8 @@
 import { DragAndDrop } from "./components/DragDrop/DragAndDrop";
-import SlideButton from "./components/SlideButton";
+import { MagnifierImg } from "./components/MagnifierImg/MagnifierImg";
+import SlideButton from "./components/SlideButton/SlideButton";
 
-import { Text } from "./components/Text";
+// import { Text } from "./components/Text";
 
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
   return (
     <>
       <DragAndDrop />
-      <Text />
       <SlideButton />
+      <MagnifierImg />
     </>
   )
 }

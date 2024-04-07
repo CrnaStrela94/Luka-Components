@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './SlideButton.css';
 
-const SlideButton: React.FC = () => {
+const SlideButton = () => {
     const [isOn, setIsOn] = useState(false);
 
     const handleSlide = () => {
