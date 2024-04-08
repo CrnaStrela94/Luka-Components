@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBtn.scss";
+import JSConfetti from "js-confetti";
 
 type SearchBtnProps = {
   placeholder?: string;
@@ -20,6 +21,11 @@ const SearchBtn: React.FC<SearchBtnProps> = ({
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log("Input value:", event.target.value);
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti({
+      emojis: ["🍆", "🥜"],
+      confettiNumber: 100,
+    });
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
