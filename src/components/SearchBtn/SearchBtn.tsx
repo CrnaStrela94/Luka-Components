@@ -24,7 +24,7 @@ const SearchBtn: React.FC<SearchBtnProps> = ({
     const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti({
       emojis: ["🍆", "🥜"],
-      confettiNumber: 100,
+      confettiNumber: 10,
     });
   };
 

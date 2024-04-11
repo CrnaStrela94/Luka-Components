@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './DragAndDrop.scss';
 import data from './CharItem.json';
+import JSConfetti from "js-confetti";
 
 type ItemType = {
     name: string;
@@ -25,6 +26,12 @@ export const DragAndDrop = () => {
     };
     const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti({
+            emojis: ["🍆", "🥜"],
+            confettiNumber: 10,
+            emojiSize: 30,
+        });
         const data = e.dataTransfer.getData('text/plain');
         const draggedElement = document.getElementById(data);
         if (draggedElement) {
